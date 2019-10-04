@@ -5,14 +5,14 @@ endif
 let g:startup_scripts_123 = 1
 
 " run NERDTree if no file was given
-function! StartUp()
-  if 0 == argc()
-      NERDTree
-      exe "normal \<c-w>\<c-w>"
-  end
-endfunction
+" function! StartUp()
+"   if 0 == argc()
+"       NERDTree
+"       exe "normal \<c-w>\<c-w>"
+"   end
+" endfunction
 
-autocmd VimEnter * call StartUp()
+" autocmd VimEnter * call StartUp()
 
 " Changes cursor shape in normal and insert modes
 if &term =~ "xterm\\|rxvt"
@@ -95,4 +95,5 @@ function! Px2rem()
 endfunction
 
 inoremap <leader>r <C-o>:call Px2rem()<CR>
+
 

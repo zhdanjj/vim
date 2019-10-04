@@ -1,4 +1,7 @@
 set encoding=utf8
+filetype plugin on
+
+set autowrite
 
 set number
 set relativenumber
@@ -56,7 +59,7 @@ set completeopt-=preview
 " set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
 " set nolist
 
-silent! colorscheme gruvbox
+silent! colorscheme neodark
 set termguicolors
 set background=dark
 
@@ -77,14 +80,14 @@ endif
 " Disable delay when leaving insert mode
 set timeoutlen=1000 ttimeoutlen=0
 
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
-highlight link htmlTag    htmlTagName
-highlight link htmlEndTag htmlTagName
-
 ab cl console.log(
 
 " Если нажать [o] когда курсор находится над комментарием,
 " vim не будет делать комментарием следующую строку
 autocmd BufRead * setlocal formatoptions-=o
+
+autocmd BufRead *.html setlocal iskeyword+=-
+autocmd BufRead *.php  setlocal iskeyword+=-
+autocmd BufRead *.scss  setlocal iskeyword+=-
+
+set shortmess-=S
