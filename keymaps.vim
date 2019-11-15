@@ -6,6 +6,7 @@ nnoremap <F3> :source $MYVIMRC<CR>
 
 inoremap <F10> <ESC>:w<CR>a
 nnoremap <F10> :w<CR>
+nnoremap <leader>e :e .<CR>
 
 " Временное или специфичное по проектам
 

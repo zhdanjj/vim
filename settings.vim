@@ -19,6 +19,8 @@ set foldlevel=99
 
 set autoindent
 
+set sidescroll=1
+
 set backspace=indent,eol,start
 
 " Status bar settings
@@ -80,7 +82,7 @@ endif
 " Disable delay when leaving insert mode
 set timeoutlen=1000 ttimeoutlen=0
 
-ab cl console.log(
+iabbrev cl console.log(
 
 " Если нажать [o] когда курсор находится над комментарием,
 " vim не будет делать комментарием следующую строку
@@ -88,6 +90,7 @@ autocmd BufRead * setlocal formatoptions-=o
 
 autocmd BufRead *.html setlocal iskeyword+=-
 autocmd BufRead *.php  setlocal iskeyword+=-
+autocmd BufRead *.twig  setlocal iskeyword+=-
 autocmd BufRead *.scss  setlocal iskeyword+=-
 
 set shortmess-=S

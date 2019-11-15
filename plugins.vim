@@ -29,12 +29,13 @@ Plug 'sheerun/vim-polyglot'
 
 "=====================================
 Plug 'mattn/emmet-vim'
-let g:user_emmet_expandabbr_key='<C-e>'
+" let g:user_emmet_expandabbr_key='<C-e>'
 imap <expr> <leader><space> emmet#expandAbbrIntelligent("\<tab>")
 "=====================================
 
 "=====================================
 Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsFlyMode = 0 
 "=====================================
 
 "=====================================
@@ -42,6 +43,7 @@ Plug 'jiangmiao/auto-pairs'
  
  let NERDTreeShowLineNumbers=1
  let NERDTreeShowHidden=1
+ let NERDTreeHijackNetrw=1
 
  nnoremap <leader>f :NERDTreeFind<CR>
  nmap <leader>d :NERDTreeToggle<CR>
