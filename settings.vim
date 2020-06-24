@@ -24,8 +24,8 @@ set sidescroll=1
 set backspace=indent,eol,start
 
 " Status bar settings
-set laststatus=2
-set ruler
+set laststatus=0
+set noruler
 
 " Bottom autocomplete dialog
 set wildmenu
@@ -61,7 +61,6 @@ set completeopt-=preview
 " set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
 " set nolist
 
-silent! colorscheme neodark
 set termguicolors
 set background=dark
 
@@ -94,3 +93,9 @@ autocmd BufRead *.twig  setlocal iskeyword+=-
 autocmd BufRead *.scss  setlocal iskeyword+=-
 
 set shortmess-=S
+set shortmess+=I
+
+syntax on
+colorscheme sublimemonokai
+
+packadd! matchit

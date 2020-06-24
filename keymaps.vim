@@ -11,6 +11,7 @@ nnoremap <leader>e :e .<CR>
 " Временное или специфичное по проектам
 
 " Insert !important in css
+inoremap <leader>i <esc>0f;i !important<esc>
 nnoremap <leader>i 0f;i !important<esc>
 
 " Temp for Z Project
@@ -24,4 +25,4 @@ nnoremap \z :s@\(-\=\d*\)px@\='px2rem('.submatch(1).')'@g<CR>:noh<CR>
 
 " Разбить строку с откр. и закр. тегами
 " inoremap <C-j> <ENTER><ESC>O<TAB>
-inoremap <C-f> <ENTER><ESC>O<TAB>
+inoremap <C-f> <ENTER><ESC>O

@@ -1,21 +1,11 @@
-" Activation and settings plugins
-" 
-
 call plug#begin('~/.vim/plugged')
 
 "=====================================
-" Plug 'ctrlpvim/ctrlp.vim'
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\v(([\/]\.(git|hg|svn))|node_modules)$',
-"   \ 'file': '\v\.(exe|so|dll)$',
-"   \}
-" let g:ctrlp_open_new_file = 'r'
-" let g:ctrlp_working_path_mode = 'c'
-" nnoremap <silent> <C-b> :CtrlPBuffer<CR>
+" Plug 'KeitaNakamura/neodark.vim'
 "=====================================
 
 "=====================================
-Plug 'KeitaNakamura/neodark.vim'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 "=====================================
 
 "=====================================
@@ -23,18 +13,29 @@ Plug 'morhetz/gruvbox'
 "=====================================
 
 "=====================================
+let g:vue_pre_processors = 'detect_on_enter'
 Plug 'sheerun/vim-polyglot'
 " let g:polyglot_disabled = ['javascript']
 "=====================================
 
 "=====================================
+let g:user_emmet_settings = {
+\ 'css' : {
+\   'snippets' : {
+\     'bg' : 'background:|;',
+\     'c' : 'color:|;',
+\     'trs' : 'transition:|;',
+\     'td' : 'text-decoration:|;',
+\   }
+\ }
+\}
 Plug 'mattn/emmet-vim'
-" let g:user_emmet_expandabbr_key='<C-e>'
 imap <expr> <leader><space> emmet#expandAbbrIntelligent("\<tab>")
+" let g:user_emmet_expandabbr_key='<C-e>'
 "=====================================
 
 "=====================================
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsFlyMode = 0 
 "=====================================
 
@@ -44,6 +45,7 @@ let g:AutoPairsFlyMode = 0
  let NERDTreeShowLineNumbers=1
  let NERDTreeShowHidden=1
  let NERDTreeHijackNetrw=1
+ let g:NERDTreeWinSize=50
 
  nnoremap <leader>f :NERDTreeFind<CR>
  nmap <leader>d :NERDTreeToggle<CR>
@@ -109,6 +111,7 @@ command! -bang -nargs=* Rg
 nnoremap <leader>g :Rg 
 nnoremap <leader>s :BLines<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>w :Windows<CR>
 nnoremap <leader>p :Files<CR>
 let $FZF_DEFAULT_OPTS = '--bind=ctrl-j:accept'
 "=====================================
@@ -167,9 +170,9 @@ Plug 'ryanoasis/vim-devicons'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  set signcolumn=yes
  
- " Use `[c` and `]c` to navigate diagnostics
- nmap <silent> [c <Plug>(coc-diagnostic-prev)
- nmap <silent> ]c <Plug>(coc-diagnostic-next)
+ " Use `[g` and `]g` to navigate diagnostics
+ nmap <silent> [g <Plug>(coc-diagnostic-prev)
+ nmap <silent> ]g <Plug>(coc-diagnostic-next)
  
  " Remap keys for gotos
  nmap <silent> gd <Plug>(coc-definition)
@@ -191,7 +194,7 @@ Plug 'ryanoasis/vim-devicons'
 
 "=====================================
 " Если есть nodejs и yarn
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " Иначе
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
