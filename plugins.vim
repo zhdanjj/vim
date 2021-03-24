@@ -98,7 +98,7 @@ nnoremap <leader>gs :Gstatus<CR>
 "=====================================
 
 "=====================================
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'commit': '2c07630341de7e4d8f85acf1e44d9b8ce8e5e48b', 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 command! -bang -nargs=* Rg
@@ -159,7 +159,7 @@ let $FZF_DEFAULT_OPTS = '--bind=ctrl-j:accept'
 "=====================================
 
 "=====================================
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 "=====================================
 
 "=====================================
@@ -201,6 +201,10 @@ Plug 'ryanoasis/vim-devicons'
 " Браузер по-умолчанию. Поставить какой-нибудь 
 " левый, чтобы не занимал вкладку в открытом по-умолчанию
 let g:mkdp_browser = 'firefox'
+"=====================================
+
+"=====================================
+Plug 'zef/vim-cycle'
 "=====================================
 
 call plug#end()

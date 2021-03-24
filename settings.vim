@@ -24,7 +24,7 @@ set sidescroll=1
 set backspace=indent,eol,start
 
 " Status bar settings
-set laststatus=0
+set laststatus=2
 set noruler
 
 " Bottom autocomplete dialog
@@ -92,8 +92,9 @@ autocmd BufRead *.php  setlocal iskeyword+=-
 autocmd BufRead *.twig  setlocal iskeyword+=-
 autocmd BufRead *.scss  setlocal iskeyword+=-
 
-set shortmess-=S
-set shortmess+=I
+set shortmess-=S " Выключить скрытие счётчика совпадений
+set shortmess+=I " Выключить интро при открытии без файла
+set shortmess+=r " [RO] вместо [readonly]
 
 syntax on
 colorscheme sublimemonokai

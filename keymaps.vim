@@ -21,6 +21,10 @@ nnoremap \r :s@\(\d*\)px@\=string(submatch(1)/14.0).'rem'@g<CR><SPACE>
 vnoremap \z :s@\(-\=\d*\)px@\='px2rem('.submatch(1).')'@g<CR>:noh<CR>
 nnoremap \z :s@\(-\=\d*\)px@\='px2rem('.submatch(1).')'@g<CR>:noh<CR>
 
+" Vue css modules
+inoremap \r <ESC>:s@ class="@ :class="$style.@<CR>i
+nnoremap \r :s@ class="@ :class="$style.@<CR>
+
 " nnoremap <leader>gc :qa!<CR>
 
 " Разбить строку с откр. и закр. тегами
